@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ledger</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/css/font.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body id="app">
+    <div class="container">
+      <div th:replace="fragments :: navbar"></div>
+
+      <div class="main pb-5">
+        <div th:replace="fragments :: menu"></div>
+
+        <transition-group name="fade">
+          <div class="card mb-2" v-for="entry in entries" :key="entry.id">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control mb-1"
+                    v-model="entry.title"
+                  />
+                  <textarea
+                    class="form-control"
+                    v-model="entry.description"
+                    rows="4"
+                  ></textarea>
+                </div>
+                <div class="col-auto">
+                  <i
+                    class="bi bi-fire fs-5 card-entry__icon-fire"
+                    @click="deleteEntry(entry.id)"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition-group>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="/js/uuidv4.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>

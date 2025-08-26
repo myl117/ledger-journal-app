@@ -1,0 +1,67 @@
+.container {
+  max-width: 650px;
+}
+
+.card {
+  border-radius: 5px;
+  color: #fff;
+  /* From https://css.glass */
+  background: rgba(63, 79, 103, 0.45);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(63, 79, 103, 0.3);
+}
+
+.btn:focus,
+.btn:active,
+.form-control {
+  outline: none !important;
+  box-shadow: none !important;
+  border-style: none;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #3f4e66;
+  border-style: none;
+}
+
+.btn-success,
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #1a4f1a;
+  border-style: none;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.form-control {
+  background: rgb(0 0 0 / 40%);
+  color: #fff;
+}
+
+.card-entry__icon-fire:hover {
+  color: #d9534f;
+  cursor: pointer;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/background.jpg");
+  background-size: cover;
+  background-color: #191e2c;
+  background-attachment: fixed;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

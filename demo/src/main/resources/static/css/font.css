@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Cartius Demo";
+  src: url("/fonts/cartiusdemoregular.ttf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cartius Demo", "Times New Roman", Times, serif;
+}
+
+.header {
+  color: #fff;
+}
+
+.index__header-h1 {
+  font-size: 65px;
+}
+
+.index__header-p {
+  font-family: "Frank Ruhl Libre", "Times New Roman", Times, serif;
+  font-size: 18px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fragments</title>
+  </head>
+  <body>
+    <div class="header text-center pt-4" th:fragment="navbar">
+      <h1 class="text-center index__header-h1 mb-0">LEDGER</h1>
+      <p class="index__header-p">
+        Through hardship and hazard, we write the chronicles of the frontier so
+        the realm may know.
+      </p>
+    </div>
+
+    <div class="card mb-2" th:fragment="menu">
+      <div class="card-body">
+        <div class="row gx-2">
+          <div class="col-auto">
+            <button
+              class="btn btn-primary shadow-sm"
+              @click="showCreateEntryModal"
+            >
+              <i class="bi bi-plus-lg"></i>
+              New Entry
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-success shadow-sm">Save Ledger</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
