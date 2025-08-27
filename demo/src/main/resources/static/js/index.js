@@ -1,6 +1,7 @@
 const App = {
   data() {
     return {
+      isMusicPlaying: false,
       entries: [],
     };
   },
@@ -8,6 +9,11 @@ const App = {
     await this.getEntries();
   },
   methods: {
+    playPauseMusic() {
+      const audioElm = document.getElementById("audio-player");
+      this.isMusicPlaying = !this.isMusicPlaying;
+      this.isMusicPlaying ? audioElm.play() : audioElm.pause();
+    },
     createEntry() {
       this.entries.push({
         id: uuidv4Int(),

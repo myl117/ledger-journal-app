@@ -57,7 +57,7 @@ public class CrudController {
     db.execute(createTableCommand);
 
     String[][] initialData = {
-      {"Familiar Colours, Hidden Intent", "Along the coastal cliffs, we met dragonborn marines, their banners imperial, mounted on winged beasts. They acknowledged our presence with nods, but their intent was inscrutable. Even allies carry weight in these borderlands."},
+      {"Familiar Colours, Hidden Intent", "Along the coastal cliffs, we met dragonborn marines, mounted on winged beasts, their banners imperial. They acknowledged our presence with nods, but their intent was inscrutable. Even allies carry weight in these borderlands."},
       {"The Weight of Purpose", "Each report we send feels meaningless, as though the truth we uncover will not satisfy the king or worse, that the realm expects something we cannot comprehend. Scouts ride in silence, each carrying their own unease."}
     };
 

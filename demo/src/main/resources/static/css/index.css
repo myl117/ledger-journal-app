@@ -65,3 +65,13 @@ body {
 .fade-leave-to {
   opacity: 0;
 }
+
+.music-player {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
