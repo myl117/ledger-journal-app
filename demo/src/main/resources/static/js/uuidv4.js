@@ -6,3 +6,9 @@ function uuidv4() {
     ).toString(16)
   );
 }
+
+function uuidv4Int() {
+  const array = new Uint32Array(2);
+  crypto.getRandomValues(array);
+  return array[0] * 0x200000 + (array[1] >>> 11);
+}
